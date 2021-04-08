@@ -1,0 +1,55 @@
+<div class="heading_font">Get_Record</div>
+<div class="text_font">
+	Retrieves a single dimensional, key-value pair array from the database.
+</div>
+
+<div class="heading_font">Description</div>
+<div class="text_font">
+	Get_Record(string $sql_query) : array
+</div>
+
+<div class="heading_font">Parameters</div>
+<div class="text_font">
+	sql_query
+</div>
+<div class="text_font">
+	Sql Query of type String that fetches data from a database.
+</div>
+
+<div class="heading_font">Return Value</div>
+<div class="text_font">
+	This function returns a key-value pair array of data corresponding the Sql Query submitted.
+	If no data matches the submitted Sql Query, i.e. The database returns an empty array, then NULL is returned instead of an empty array.
+</div>
+
+<div class="heading_font">Example</div>
+<div class="code_font">
+	Given the following table - Table_1:
+
+	<table>
+		<tr>
+			<th>field_id</th>
+			<th>field_1</th> 
+			<th>field_2</th> 
+			<th>field_3</th> 
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>Text example one.</td>
+			<td>100</td>
+			<td>Apple</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Text example two.</td>
+			<td>101</td>
+			<td>Orange</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>Text example three.</td>
+			<td>256</td>
+			<td>Pear</td>
+		</tr>
+	</table>
+</div>

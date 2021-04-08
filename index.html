@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<meta charset="UTF-8">
+		<title>Database Wrapper</title>
+
+		<link rel="stylesheet" type="text/css" href="./referenced_help_files/style.css"/>
+
+		<script type="text/javascript" src="./referenced_help_files/introduction.js"></script>
+		<script type="text/javascript" src="./referenced_help_files/setup.js"></script>
+
+		<script type="text/javascript" src="./referenced_help_files/count.js"></script>
+		<script type="text/javascript" src="./referenced_help_files/create_database.js"></script>
+		<script type="text/javascript" src="./referenced_help_files/get_insert_id.js"></script>
+		<script type="text/javascript" src="./referenced_help_files/get_record.js"></script>
+		<script type="text/javascript" src="./referenced_help_files/get_recordset.js"></script>
+		<script type="text/javascript" src="./referenced_help_files/is_connected.js"></script>
+		<script type="text/javascript" src="./referenced_help_files/run_query.js"></script>
+		<script type="text/javascript" src="./referenced_help_files/set_database.js"></script>
+
+		<script type="text/javascript">
+			function load_page(html_file)
+			{
+				document.getElementById("content_container").innerHTML = null;
+
+				var html = null;
+
+				switch(html_file)
+				{
+					case "introduction": 	html = introduction_html(); 	break;
+					case "setup": 			html = setup_html(); 			break;
+
+					case "count": 			html = count_html(); 			break;
+					case "create_database":	html = create_database_html(); 	break;
+					case "get_insert_id":	html = get_insert_id_html(); 	break;
+					case "get_record": 		html = get_record_html(); 		break;
+					case "get_recordset": 	html = get_recordset_html(); 	break;
+					case "is_connected":	html = is_connected_html(); 	break;
+					case "run_query":		html = run_query_html(); 		break;
+					case "set_database":	html = set_database_html(); 	break;
+				}
+
+				if(html)
+				{
+					document.getElementById("content_container").innerHTML 	= html;
+					document.getElementById("god_container").scrollTop 		= 0;
+				}
+			}
+
+			function load_introduction()
+			{
+				load_page('introduction');
+			}
+		</script>
+	</head>
+	<body onload="load_introduction()">
+		<div id="god_container">
+			<div id="header_container">Database Wrapper Documentation</div>
+			<div id="structure_container">
+				<div id="menu_container">
+					<div class="heading_font menu_link" onclick="load_introduction()">Introduction</div>
+					<div class="heading_font menu_link" onclick="load_page('setup')">Setup</div>
+					<br>
+					<div class="code_font menu_label"><i>Functions:</i></div>
+					<div class="heading_font menu_link" onclick="load_page('count')">Count</div>
+					<div class="heading_font menu_link" onclick="load_page('create_database')">Create_Database</div>
+					<div class="heading_font menu_link" onclick="load_page('get_insert_id')">Get_Insert_ID</div>
+					<div class="heading_font menu_link" onclick="load_page('get_record')">Get_Record</div>
+					<div class="heading_font menu_link" onclick="load_page('get_recordset')">Get_Recordset</div>
+					<div class="heading_font menu_link" onclick="load_page('is_connected')">is_Connected</div>
+					<div class="heading_font menu_link" onclick="load_page('run_query')">Run_Query</div>
+					<div class="heading_font menu_link" onclick="load_page('set_database')">Set_Database</div>
+				</div>
+				<div id="content_container"></div>
+			</div>
+		</div>
+	</body>
+</html>
