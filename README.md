@@ -1,7 +1,7 @@
 # Database Wrapper
 
-A PHP Script that makes database interactions simpler.
-<br>
+<p>A PHP Script that makes database interactions simpler.</p>
+
 This script currently supports the following Database Server Types:
 <ul>
   <li>MySql</li>
